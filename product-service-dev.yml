@@ -15,5 +15,5 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
     url: jdbc:postgresql://localhost:5432/mitocode
-    username: postgres
-    password: 123456
+    username: '{cipher}f562a693ba2e412f87005398d5b47521a00167f58d557b31c9c8ed24b3d30dc6'
+    password: '{cipher}06c80eacb998b7a47c292aec447e94b78ca478db642a4929affc9f639507fbf0'
