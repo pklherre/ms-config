@@ -1,0 +1,7 @@
+server:
+  port: 9030
+# Mongo configuration
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mitocode
