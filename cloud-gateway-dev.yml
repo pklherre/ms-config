@@ -20,4 +20,4 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
-            - UserServiceFilter=MitocodeValue,MitocodeKey
+            - UserServiceFilter=MitocodeKey,MitocodeValue
