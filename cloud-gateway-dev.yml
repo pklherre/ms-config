@@ -13,6 +13,7 @@ spring:
             - Path=/api/product-service/**
           filters:
             - StripPrefix=2 # para que tome desde el segundo valor del Path
+            - AddRequestParameter=flag,false
         - id: user-service-route
           uri: lb://user-service
           predicates:
