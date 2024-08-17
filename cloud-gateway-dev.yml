@@ -8,7 +8,7 @@ spring:
     gateway:
       routes:
         - id: product-service-route
-          uri: lb://product-service
+          uri: lb://product-service #ahí lo está haciendo con Eureka server, para hacerlo con el api gateway el balanceo, se pondría http://service-1.com, http://service-2.com
           predicates: 
             - Path=/api/product-service/**
           filters:
