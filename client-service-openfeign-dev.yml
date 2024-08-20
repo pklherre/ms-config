@@ -1,2 +1,8 @@
 server:
   port: 9010
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        base-path: /actuator # por si lo quiero reescribir
