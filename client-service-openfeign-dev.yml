@@ -24,3 +24,11 @@ resilience4j:
     instances:
       product-service-cb:
         base-config: cualquier-cosa
+  
+  timelimiter:
+    configs:
+      product-service-tl:
+        timeoutDuration: 1s
+    instances:
+      mitocode-product-tl:
+        base-config: product-service-tl
