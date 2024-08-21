@@ -20,6 +20,7 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 8
         slowCallDurationThreshold: 50ms
         slowCallRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
     instances:
       product-service-cb:
         base-config: cualquier-cosa
