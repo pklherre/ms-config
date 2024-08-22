@@ -17,6 +17,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: product-service-cb
+                statusCodes: 400, 401, 403, 500, 503
                 fallbackUri: forward:/api/user-service/api/mitocode/user
         - id: user-service-route
           uri: lb://user-service
