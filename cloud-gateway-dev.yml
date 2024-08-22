@@ -14,6 +14,10 @@ spring:
           filters:
             - StripPrefix=2 # para que tome desde el segundo valor del Path
             - AddRequestParameter=flag,true
+            - name: CircuitBreaker
+              args:
+                name: product-service-cb
+                fallbackUri: forward:/api/user-service/api/mitocode/user
         - id: user-service-route
           uri: lb://user-service
           predicates:
@@ -21,3 +25,19 @@ spring:
           filters:
             - StripPrefix=2
             - UserServiceFilter=MitocodeKey,MitocodeValue
+
+# Circuitbreaker config
+resilience4j:
+  circuitbreaker:
+    configs:
+      cualquier-cosa:
+        slidingWindowSize: 15
+        failureRateThreshold: 20
+        waitDurationInOpenState: 20s
+        permittedNumberOfCallsInHalfOpenState: 8
+        slowCallDurationThreshold: 50ms
+        slowCallRateThreshold: 50
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+    instances:
+      product-service-cb:
+        base-config: cualquier-cosa
