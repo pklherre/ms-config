@@ -4,3 +4,9 @@ server:
 mitocode:
   security:
     key: mitocode-secret
+
+# Mongo configuration
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mitocode
