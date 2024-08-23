@@ -1,0 +1,6 @@
+server:
+  port: 9099
+
+mitocode:
+  security:
+    key: mitocode-secret
