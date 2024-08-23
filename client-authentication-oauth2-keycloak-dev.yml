@@ -1,0 +1,18 @@
+server:
+  port: 9098
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider: 
+          mitocode-realm:
+            issuer-uri: http://localhost:8080/realms/mitocode-realm
+        registration:
+          mitocode-realm:
+            provider: mitocode-realm
+            client-name: mitocode-client
+            client-id: mitocode-realm
+            client-secret: KgweKlhSORjsq1dH5boXVmLDPtrIiizv
+            scope: openid
+            authorization-grant-type: authorization_code
