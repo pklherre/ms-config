@@ -3,7 +3,7 @@ server:
 
 mitocode:
   security:
-    key: mitocode-secret
+    key: bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0
 
 # Mongo configuration
 spring:
