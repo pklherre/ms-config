@@ -43,7 +43,7 @@ management:
     sampling:
       probability: 0.5
 
-#loggin configuration
+#logging configuration
 logging:
   level:
     org:
