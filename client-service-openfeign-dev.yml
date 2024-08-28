@@ -41,13 +41,13 @@ resilience4j:
 management:
   tracing:
     sampling:
-      probability: 0.5
+      probability: 1.0
 
 #logging configuration
 logging:
   level:
     org:
       springframework:
-        web: DEBUG # ALL, INFO, ERROR
+        web: ERROR # ALL, INFO, ERROR
   pattern:
     level: '%5p[${spring.application.name},%X{traceId:-},%X{spanId:-}]'
