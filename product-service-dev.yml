@@ -17,3 +17,18 @@ spring:
     url: jdbc:postgresql://localhost:5432/mitocode
     username: '{cipher}f562a693ba2e412f87005398d5b47521a00167f58d557b31c9c8ed24b3d30dc6'
     password: '{cipher}06c80eacb998b7a47c292aec447e94b78ca478db642a4929affc9f639507fbf0'
+
+#Zipkin configuration
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+#logging configuration
+logging:
+  level:
+    org:
+      springframework:
+        web: ERROR # ALL, INFO, ERROR, DEBUG
+  pattern:
+    level: '%5p[${spring.application.name},%X{traceId:-},%X{spanId:-}]'

@@ -46,3 +46,18 @@ resilience4j:
 mitocode:
   security:
     key: bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0bWl0b2NvZGUtc2VjcmV0
+
+#Zipkin configuration
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+#logging configuration
+logging:
+  level:
+    org:
+      springframework:
+        web: ERROR # ALL, INFO, ERROR, DEBUG
+  pattern:
+    level: '%5p[${spring.application.name},%X{traceId:-},%X{spanId:-}]'
