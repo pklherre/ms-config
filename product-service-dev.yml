@@ -38,5 +38,5 @@ springdoc:
     path: /api-docs
     enabled: true
   swagger-ui:
-      path: /swagger-ui/index.html
+      path: /openapi.yml
       enabled: true
